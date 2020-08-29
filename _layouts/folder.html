@@ -1,0 +1,21 @@
+---
+layout: default
+title: "Folder"
+---
+
+<!-- Begin List Posts
+================================================== -->
+
+<h1>{{ page.title }}</span></h1>
+
+<div class="blog-grid-container">
+
+{% for category in site.categories %} 
+    {% if page.title == category[0] %}
+        {% assign pages_list = category[1] %}
+        {% for post in pages_list %}
+            {% include postbox.html %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</div>

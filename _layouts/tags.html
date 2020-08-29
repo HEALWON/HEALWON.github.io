@@ -5,17 +5,27 @@ permalink: "/tags.html"
 ---
 
 {% for tag in site.tags %}
-<h4 class="mt-5 mb-neg-30" id="{{ tag[0] | replace: " ","-" }}"><span class="text-capitalize text-small badge badge-primary">{{ tag[0] }}</span></h4>
-<div class="blog-grid-container">
-{% assign pages_list = tag[1] %}
-{% for post in pages_list %}
-{% if post.title != null %}
-{% if group == null or group == post.group %}
-{% include postbox.html %}
-{% endif %}
-{% endif %}
+    <a class="smoothscroll badge badge-primary text-capitalize" href="{{site.baseurl}}/tags#{{ tag[0] | replace: " ","-" }}">{{ tag[0] }}</a>
 {% endfor %}
-{% assign pages_list = nil %}
-{% assign group = nil %}
-</div>
+
+{% for tag in site.tags %}
+	<h4 class="mt-5 mb-neg-30" id="{{ tag[0] | replace: " ","-" }}"><span class="text-capitalize text-small badge badge-primary">{{ tag[0] }}</span></h4>
+	<div class="blog-grid-container">
+	{% assign pages_list = tag[1] %}
+	{% assign maxPosts = 3 %}
+	{% assign count = 0 %}
+	{% for post in pages_list %}
+		{% if post.title != null %}
+		{% if group == null or group == post.group %}
+		{% if count >= maxPosts %}
+			{% break %}
+		{% endif %}
+		{% include postbox.html %}
+		{% assign count = count | plus: 1 %}
+		{% endif %}
+		{% endif %}
+	{% endfor %}
+	{% assign pages_list = nil %}
+	{% assign group = nil %}
+	</div>
 {% endfor %}

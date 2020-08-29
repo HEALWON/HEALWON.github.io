@@ -4,19 +4,28 @@ layout: default
 permalink: "/categories.html"
 ---
 
+{% for category in site.categories %}
+    <a class="smoothscroll badge badge-primary text-capitalize" href="{{site.baseurl}}/categories#{{ category[0] | replace: " ","-" }}">{{ category[0] }}</a>
+{% endfor %}
 
 {% for category in site.categories %}
-<h4 class="mt-5 mb-neg-30" id="{{ category[0] | replace: " ","-" }}"><span class="text-capitalize badge badge-primary text-small">{{ category[0] }}</span></h4>
-<div class="blog-grid-container">
-{% assign pages_list = category[1] %}
-{% for post in pages_list %}
-{% if post.title != null %}
-{% if group == null or group == post.group %}
-{% include postbox.html %}
-{% endif %}
-{% endif %}
-{% endfor %}
-{% assign pages_list = nil %}
-{% assign group = nil %}
-</div>
+	<h4 class="mt-5 mb-neg-30" id="{{ category[0] | replace: " ","-" }}"><span class="text-capitalize badge badge-primary text-small">{{ category[0] }}</span></h4>
+	<div class="blog-grid-container">
+	{% assign pages_list = category[1] %}
+	{% assign maxPosts = 3 %}
+	{% assign count = 0 %}
+	{% for post in pages_list %}
+		{% if post.title != null %}
+		{% if group == null or group == post.group %}
+		{% if count >= maxPosts %}
+			{% break %}
+		{% endif %}
+		{% include postbox.html %}
+		{% assign count = count | plus: 1 %}
+		{% endif %}
+		{% endif %}
+	{% endfor %}
+	{% assign pages_list = nil %}
+	{% assign group = nil %}
+	</div>
 {% endfor %}
