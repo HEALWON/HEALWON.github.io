@@ -52,8 +52,12 @@ plugins:
   - jekyll-archives
   - jekyll-figure
     
-# Archives
-
+# defaults
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true 
 
 # Other
 highlighter: none
