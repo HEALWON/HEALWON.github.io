@@ -172,7 +172,7 @@ $ bundle exec jekyll serve
 이제 다음 글에서는 홈페이지를 내 입맛대로 수정할 것이다.
 
 
-### 5.Reference
+### 5.References
 ***
 대부분의 과정은 줌코딩님의 게시글을 참고하였다.   
 [차근차근 Github 블로그 만들기(1) - Github 블로그 개설 및 테마 설정하기

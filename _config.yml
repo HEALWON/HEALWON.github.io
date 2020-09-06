@@ -5,7 +5,7 @@ description: "healwon's blog"
 baseurl: ""
 url: "https://healwon.github.io"
 logo: 'assets/images/logo.png'
-disqus: 'demowebsite'
+disqus: 'healwon's blog'
 email: woni9911@gmail.com
 locale: ko-KR
 title_seperator: "-"
