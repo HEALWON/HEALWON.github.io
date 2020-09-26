@@ -57,7 +57,9 @@ ga('send', 'pageview');
 	    <li><a href="{{ site.baseurl }}/categories/{{ category[0] }}">- {{ category[0] }}</a></li>
 	{% endfor %}
         <li><a href="{{ site.baseurl }}/tags">Tags</a></li>
-        <li><a href="{{ site.baseurl }}/archives">Archives</a></li>   
+{% for tag in site.tags %}
+    <a class="smoothscroll badge badge-primary text-capitalize" href="{{site.baseurl}}/tags#{{ tag[0] | replace: " ","-" }}">{{ tag[0] }}</a>
+{% endfor %}
     </ul>   
 </nav>
 
