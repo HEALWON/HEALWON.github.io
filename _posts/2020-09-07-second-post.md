@@ -2,7 +2,7 @@
 layout: post
 title: "[github] Github blog(2): Jekyll theme customizing"
 author: healwon
-image: assets/images/스크린샷, 2020-08-30 17-51-48.png
+image: assets/images/makeblog/스크린샷, 2020-08-30 17-51-48.png
 categories: [github]
 tags:
 - blog
@@ -72,7 +72,7 @@ authors:
 # Pagination 
 paginate: 6
 paginate_path: /page:num/
-``` 
+```
 한 페이지에 보여줄 포스트의 수.  
 ```
 # Lazy Images ("enabled" or "disabled")
@@ -97,9 +97,9 @@ authorbox: "disabled"
 
 **1. Navigation Bar customizing**
 
-![image7](/assets/images/스크린샷, 2020-08-30 17-55-12.png)  
+![image7](/assets/images/makeblog/스크린샷, 2020-08-30 17-55-12.png)  
 
-![image1](/assets/images/스크린샷, 2020-08-30 17-51-48.png) ```네비게이션 바 수정 전후. 사진은 재탕```   
+![image1](/assets/images/makeblog/스크린샷, 2020-08-30 17-51-48.png) ```네비게이션 바 수정 전후. 사진은 재탕```   
 
 기본 네비게이션 바에 있는 memoirs 테마 관련 항목을 삭제하고 카테고리, 태그별 보기 항목을 추가하였다.  
 네비게이션 내용을 수정하기 위해, _layout 폴더의 default.html을 수정해주었다. 다른 테마에 해당할지는 모르겠지만 해당 파일에 네비게이션 관련 내용이 들어있을 확률이 높을 것이다.

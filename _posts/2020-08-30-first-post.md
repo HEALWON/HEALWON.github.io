@@ -2,7 +2,7 @@
 layout: post
 title: "[github] Github blog(1): repository 생성 ~ jekyll theme 적용하기"
 author: healwon
-image: assets/images/스크린샷, 2020-08-30 17-51-48.png
+image: assets/images/makeblog/스크린샷, 2020-08-30 17-51-48.png
 categories: [github]
 tags:
 - blog
@@ -16,7 +16,7 @@ toc: true
 개인 블로그를 사용하는 건 네이버 이후로 처음이다. 학부 3학년이 되었는데 정작 머리에 남은게 아무것도 없는 것 같아서, 필력도 기를 겸 공부 기록용으로 블로그를 만들어 사용해보려 한다. 주로 공부하다가 막힌 부분에 대해 쓰게 될 것 같다.   
 아래에는 구글링해가며 찾은 블로그 제작 과정을 정리해보려 한다.
 
-![image1](/assets/images/스크린샷, 2020-08-30 17-51-48.png) ```완성한 블로그. 로고, 프로필 등은 차차 추가해 나가려 한다. (2020.08.30 기준)```
+![image1](/assets/images/makeblog/스크린샷, 2020-08-30 17-51-48.png) ```완성한 블로그. 로고, 프로필 등은 차차 추가해 나가려 한다. (2020.08.30 기준)```
 
 ### 2. repository 생성하고 local 저장소 만들기
 ***
@@ -24,11 +24,11 @@ github page를 만들기 위해서는 page용 repository를 따로 만들어야 
 [github](https://github.com/)으로 가서, (만일 계정이 없다면 만들어준 후) new를 눌러 새 repoaitory 설정 화면으로 이동한다.   
 이때 repository 이름은 반드시 username으로 시작해야 하는데,   
 
-![image2](/assets/images/스크린샷, 2020-08-30 17-53-26.png)```special repository?```
+![image2](/assets/images/makeblog/스크린샷, 2020-08-30 17-53-26.png)```special repository?```
 
 이렇게 special repository를 작성할 수 있기 때문이라고 뜬다. blog를 만드려면 **'username.github.io'**를 입력해 주고, 공개로 설정한 뒤 'Add a README file'을 선택하여 초기 설정을 해 주었다.   
 
-![image3](/assets/images/스크린샷, 2020-08-30 17-52-30.png)
+![image3](/assets/images/makeblog/스크린샷, 2020-08-30 17-52-30.png)
 
 처음에는 *README.md* 파일만 존재할 것이다. 이제 편한 수정을 위해 컴퓨터에 local 저장소를 만들어주는데, 처음 만들 때에는 clone, 이후에는 push로 local->git, pull로 git->local 업데이트를 한다. 업데이트 되는 쪽은 데이터가 손실되니 local 파일을 수정하고 pull을 하는 등의 실수를 하지 않도록 주의해야겠다.   
 
@@ -40,11 +40,11 @@ github page를 만들기 위해서는 page용 repository를 따로 만들어야 
 
 ***
 
-![image4](/assets/images/스크린샷, 2020-08-30 17-52-43.png)
+![image4](/assets/images/makeblog/스크린샷, 2020-08-30 17-52-43.png)
 
 ssh키를 만들지 않아 경고문이 뜨는데, 그냥 *clone with HTTPS*를 사용했다.   
 
-![image5](/assets/images/스크린샷, 2020-08-30 17-52-55.png)
+![image5](/assets/images/makeblog/스크린샷, 2020-08-30 17-52-55.png)
 
 위의 주소를 복사하고 terminal에 다음과 같이 입력했다.   
 (git이 설치되어 있지 않을 경우 설치해야 한다.)
@@ -60,7 +60,7 @@ $ git clone "복사한 주소"
 ***
 *3. jekyll theme 적용하기*와 *4. localhost 사용하기*는 ruby를 이용한다. ruby는 사용해 본 적이 없지만, 그냥 열심히 설치하다보니 어떻게든 되었다.
 
-![image6](/assets/images/스크린샷, 2020-08-30 16-24-23.png)
+![image6](/assets/images/makeblog/스크린샷, 2020-08-30 16-24-23.png)
 
 [jekylltheme.org](http://jekyllthemes.org/)에서 비상업/상업적 이용이 가능한 무료 블로그 테마를 제공하고 있다. 
 
@@ -167,7 +167,7 @@ $ bundle exec jekyll serve
 브라우저에서 **'localhost:4000'**를 입력하면 수정사항이 바로바로 반영된 홈페이지가 뜬다. 서버가 열려있는 동안에는 계속 반영된다.   
 **다만, username.github.io/_config.yml을 수정할 경우에는 ctrl-c를 눌러 종료하고 다시 서버를 열어주어야 한다.**
 
-![image7](/assets/images/스크린샷, 2020-08-30 17-55-12.png)```테마 적용 결과. 이제 customizaing을 해야 한다.```
+![image7](/assets/images/makeblog/스크린샷, 2020-08-30 17-55-12.png)```테마 적용 결과. 이제 customizaing을 해야 한다.```
 
 이제 다음 글에서는 홈페이지를 내 입맛대로 수정할 것이다.
 
